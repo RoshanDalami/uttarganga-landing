@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { MapPin, Phone, Mail } from "lucide-react";
-import useCompany from '@/store/useCompany'
+import useCompany from "@/store/useCompany";
 import Image from "next/image";
 import { imageurlgenerator } from "@/utils/imageurlgenerator";
 export default function Footer() {
@@ -46,7 +46,6 @@ export default function Footer() {
                 </Link>
               </li>
 
-
               <li>
                 <Link href="/contact" className="text-white">
                   Contact
@@ -63,11 +62,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-white">
                 <Phone className="h-4 w-4 " />
-                <span>01-4953039 / 01-4153239 / 01-4153040</span>
+                <span>01-5363166</span>
               </li>
               <li className="flex items-center gap-2 text-white">
                 <Mail className="h-4 w-4 " />
-                <span>vgpci@nea.org.np</span>
+                <span>ugpcl@nea.org.np</span>
               </li>
             </ul>
           </div>
