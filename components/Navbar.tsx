@@ -155,7 +155,7 @@ export default function Navbar() {
   }, [logoData, setLogoData]);
 
   const navLinks = [
-    { href: "/", label: "Home" },
+    // { href: "/", label: "Home" },
     {
       href: "",
       label: "About Us",

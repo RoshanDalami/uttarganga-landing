@@ -53,7 +53,7 @@ export default function AboutPage() {
       </motion.section>
 
       {/* Core Values */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
             Our Core Values
@@ -104,7 +104,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Management Team */}
       <div className="max-w-6xl mx-auto p-20 px-4 sm:px-6 lg:px-8">
@@ -118,10 +118,18 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900">
               Our Mission & Vision
             </h2>
-            <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-              Driving sustainable energy development through innovation,
-              responsibility, and long-term commitment.
-            </p>
+            <div className="text-gray-600 leading-7">
+              <p className="text-gray-600 leading-7">
+                To develop sustainable hydroelectric facilities that harness the
+                power of nature, providing clean and reliable energy for
+                communities across Nepal.
+              </p>{" "}
+              <br />
+              <p className="text-gray-600 leading-7">
+                We are committed to innovation, environmental responsibility,
+                and supporting the nation’s growth through renewable energy.
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
