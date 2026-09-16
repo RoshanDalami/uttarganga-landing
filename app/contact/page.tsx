@@ -4,11 +4,16 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { TUserMessagePayload } from "@/types/user-message.type";
-import { useCreateUserMessage } from '@/service/apiHooks/user-message.hook'
+import { useCreateUserMessage } from "@/service/apiHooks/user-message.hook";
 import LoadingButtonCircle from "@/components/reusable/LoadingCircleButton";
 import PageBanner from "@/components/reusable/PageBanner";
 export default function ContactPage() {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<TUserMessagePayload>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<TUserMessagePayload>();
   const { mutateAsync: createUserMessage, isPending } = useCreateUserMessage();
   const onSubmit = async (data: TUserMessagePayload) => {
     await createUserMessage(data);
@@ -16,7 +21,10 @@ export default function ContactPage() {
   };
   return (
     <div className="min-h-screen bg-white">
-      <PageBanner title="Contact Us" subtitle="Get in touch with us for inquiries, partnerships, or information" />
+      <PageBanner
+        title="Contact Us"
+        subtitle="Get in touch with us for inquiries, partnerships, or information"
+      />
 
       {/* Contact Form & Info */}
       <motion.section
@@ -33,7 +41,11 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Send Us a Message
               </h2>
-              <form className="space-y-4" onSubmit={handleSubmit(onSubmit)} noValidate>
+              <form
+                className="space-y-4"
+                onSubmit={handleSubmit(onSubmit)}
+                noValidate
+              >
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name <span className="text-red-500">*</span>
@@ -89,7 +101,9 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
-                    {...register("subject", { required: "Subject is required" })}
+                    {...register("subject", {
+                      required: "Subject is required",
+                    })}
                     className={`w-full px-4 py-3 border rounded focus:outline-none focus:border-blue-700 ${errors.subject ? "border-red-500" : "border-gray-300"}`}
                     placeholder="Subject of your message"
                   />
@@ -105,7 +119,9 @@ export default function ContactPage() {
                   </label>
                   <textarea
                     rows={5}
-                    {...register("message", { required: "Message is required" })}
+                    {...register("message", {
+                      required: "Message is required",
+                    })}
                     className={`w-full px-4 py-3 border rounded focus:outline-none focus:border-blue-700 ${errors.message ? "border-red-500" : "border-gray-300"}`}
                     placeholder="Your message"
                   />
@@ -150,18 +166,16 @@ export default function ContactPage() {
                       <Phone className="h-5 w-5 text-blue-500 mt-1 " />
                       <div>
                         <div className="font-medium text-gray-900">Phone</div>
-                        <div className="text-gray-700">01-4153239</div>
-                        <div className="text-gray-700">01-4953039</div>
-                        <div className="text-gray-700">01-4153040</div>
+                        <div className="text-gray-700">01-5363166</div>
+                        {/* <div className="text-gray-700">01-4953039</div>
+                        <div className="text-gray-700">01-4153040</div> */}
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Mail className="h-5 w-5 text-blue-500 mt-1 " />
                       <div>
                         <div className="font-medium text-gray-900">Email</div>
-                        <div className="text-gray-700">
-                          vgpci@nea.org.np
-                        </div>
+                        <div className="text-gray-700">ugpcl@nea.org.np</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -171,10 +185,10 @@ export default function ContactPage() {
                           Office Hours
                         </div>
                         <div className="text-gray-700">
-                          Sunday - Friday: 9:00 AM - 5:00 PM
+                          Monday - Friday: 9:00 AM - 5:00 PM
                         </div>
                         <div className="text-gray-700 text-sm">
-                          (Saturday: Closed)
+                          (Saturday & Sunday: Closed)
                         </div>
                       </div>
                     </div>
