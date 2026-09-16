@@ -156,8 +156,8 @@ export default function ContactPage() {
                       <div>
                         <div className="font-medium text-gray-900">Address</div>
                         <div className="text-gray-700">
-                          {/* Chundevi Marga, House No: 217 */}
-                          {/* <br /> */}
+                          United World Trade Center,
+                          <br />
                           Tripureshwor, Kathmandu, Nepal
                         </div>
                       </div>
@@ -212,10 +212,15 @@ export default function ContactPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-start">
             Find Us
           </h2>
-          <div className="bg-gray-300 h-96 rounded flex items-center justify-center">
-            <p className="text-gray-600">
-              Map Placeholder - Head Office Location
-            </p>
+          <div className="w-full h-96 overflow-hidden rounded-lg">
+            <iframe
+              className="w-full h-full border-0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212.45971273607128!2d85.31362039656636!3d27.69400780561267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1852afc313c5%3A0x7ce32841d9599195!2sUnited%20World%20Trade%20Center!5e1!3m2!1sen!2snp!4v1789547839073!5m2!1sen!2snp"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="Head Office Location"
+            />
           </div>
         </div>
       </motion.section>

@@ -118,18 +118,10 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900">
               Our Mission & Vision
             </h2>
-            <div className="text-gray-600 leading-7">
-              <p className="text-gray-600 leading-7">
-                To develop sustainable hydroelectric facilities that harness the
-                power of nature, providing clean and reliable energy for
-                communities across Nepal.
-              </p>{" "}
-              <br />
-              <p className="text-gray-600 leading-7">
-                We are committed to innovation, environmental responsibility,
-                and supporting the nation’s growth through renewable energy.
-              </p>
-            </div>
+            <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+              Driving sustainable energy development through innovation,
+              responsibility, and long-term commitment.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -149,7 +141,7 @@ export default function AboutPage() {
                 Our Mission
               </h3>
 
-              <p className="text-gray-600 leading-7">
+              <div className="text-gray-600 leading-7">
                 <p className="text-gray-600 leading-7">
                   To develop sustainable hydroelectric facilities that harness
                   the power of nature, providing clean and reliable energy for
@@ -160,7 +152,7 @@ export default function AboutPage() {
                   We are committed to innovation, environmental responsibility,
                   and supporting the nation’s growth through renewable energy.
                 </p>
-              </p>
+              </div>
             </motion.div>
 
             {/* Vision */}
