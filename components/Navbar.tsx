@@ -140,6 +140,7 @@ import Image from "next/image";
 import { imageurlgenerator } from "@/utils/imageurlgenerator";
 import useCompany from "@/store/useCompany";
 import { useEffect, useState } from "react";
+import { LanguageSwitcher } from "@/lib/i18n";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -280,6 +281,9 @@ export default function Navbar() {
             })}
           </div>
 
+          <div className="hidden md:block">
+            <LanguageSwitcher />
+          </div>
           {/* Hamburger for Mobile */}
           <button
             className="md:hidden flex items-center justify-center p-2 rounded text-gray-700 hover:bg-gray-100 focus:outline-none"
@@ -321,6 +325,7 @@ export default function Navbar() {
         >
           <div className="flex items-center justify-between px-4 py-4 border-b">
             <span className="text-lg font-bold">Menu</span>
+            <LanguageSwitcher />
 
             <button
               className="p-2 rounded text-gray-700 hover:bg-gray-100 focus:outline-none"
